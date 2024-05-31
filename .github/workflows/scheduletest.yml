@@ -39,7 +39,7 @@ jobs:
       run: |
         git config --global user.name "dornrock123"
         git config --global user.email "krisd3214@gmail.com"
-        DATE=$(date +'%Y%m%d-%H%M%S')
+        DATE=$(date +'%Y%m%d')
         NEW_BRANCH_NAME="schedule-${DATE}"
         git checkout -b $NEW_BRANCH_NAME
         git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git $NEW_BRANCH_NAME
